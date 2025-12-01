@@ -1,112 +1,68 @@
-<div align="center">
-  
-  <div>
-    <img src="https://img.shields.io/badge/-Next.JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=black" alt="next.js" />
-    <img src="https://img.shields.io/badge/-Vapi-white?style=for-the-badge&color=5dfeca" alt="vapi" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
-    <img src="https://img.shields.io/badge/-Firebase-black?style=for-the-badge&logoColor=white&logo=firebase&color=DD2C00" alt="firebase" />
-  </div>
+# 🤖 InterviewPrep - AI-Powered Mock Interview Platform
 
-  <h3 align="center">InterviewPrep: A job interview preparation platform powered by Vapi AI Voice agents</h3>
-</div>
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Vapi AI](https://img.shields.io/badge/Vapi_AI-Voice_Integration-blue?style=for-the-badge)
 
-## 📋 <a name="table">Table of Contents</a>
+> **A sophisticated full-stack application that leverages GenAI and Voice AI to simulate real-time technical interviews.**
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets (Code to Copy)](#snippets)
-6. 🔗 [Assets](#links)
-7. 🚀 [More](#more)
+---
 
+## 🚀 Overview
 
+**InterviewPrep** addresses the anxiety and lack of feedback candidates face during job hunting. By integrating **Google Gemini** for intelligent question generation and **Vapi AI** for real-time voice interaction, this application provides users with a lifelike mock interview experience.
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+It’s not just a CRUD app; it's a complex integration of real-time audio streaming, LLM processing, and secure backend architecture.
 
-- Next.js
-- Firebase
-- Tailwind CSS
-- Vapi AI
-- shadcn/ui
-- Google Gemeni
-- Zod
+### 🌟 Key Features
 
-## <a name="features">🔋 Features</a>
+* **🎙️ Real-time Voice Interaction:** Users speak directly to the AI, which responds instantly with human-like latency using Vapi AI.
+* **🧠 Context-Aware Questions:** Google Gemini generates technical questions dynamically based on the user's specified job role and experience level.
+* **📊 Instant Feedback Loop:** Provides detailed feedback on answers, rating them on correctness and clarity.
+* **🔐 Secure Authentication:** Robust user management and session handling via Firebase Auth.
+* **📱 Responsive Dashboard:** A clean, accessible UI built with Tailwind CSS and Shadcn/UI for tracking interview history.
 
-👉 **Authentication**: Sign Up and Sign In using password/email authentication handled by Firebase.
+---
 
-👉 **Create Interviews**: Easily generate job interviews with help of Vapi voice assistants and Google Gemini.
+## 🛠️ Technical Architecture
 
-👉 **Get feedback from AI**: Take the interview with AI voice agent, and receive instant feedback based on your conversation.
+This project demonstrates proficiency in building scalable, AI-driven web applications.
 
-👉 **Modern UI/UX**: A sleek and user-friendly interface designed for a great experience.
+### Core Stack
+* **Frontend:** Next.js 14 (App Router) for server-side rendering and optimized performance.
+* **Language:** TypeScript for type safety and maintainable code.
+* **Styling:** Tailwind CSS + Shadcn/UI for a modern, accessible component system.
+* **Backend/BaaS:** Firebase (Firestore, Auth, Storage) for serverless scalability.
+* **AI Integrations:**
+    * **Vapi AI:** Handles voice-to-text, text-to-voice, and conversation flow.
+    * **Google Gemini API:** Generates interview context and evaluates user responses.
 
-👉 **Interview Page**: Conduct AI-driven interviews with real-time feedback and detailed transcripts.
+### 💡 Challenges & Learnings
+*(Recruiters love this section—it shows you understand your code)*
 
-👉 **Dashboard**: Manage and track all your interviews with easy navigation.
+* **Handling Real-Time Audio:** Implemented low-latency voice streaming to ensure the "interviewer" doesn't lag, providing a natural conversation flow.
+* **Prompt Engineering:** Designed robust system prompts for Gemini to ensure the AI acts strictly as a professional interviewer and provides constructive feedback.
+* **State Management:** Managed complex application states (recording status, transcript generation, feedback loading) to ensure a smooth UX.
 
-👉 **Responsiveness**: Fully responsive design that works seamlessly across devices.
+---
 
-and many more, including code architecture and reusability
+## 📸 Demo & Screenshots
 
-## <a name="quick-start">🤸 Quick Start</a>
+*(Add screenshots of your Dashboard, the Interview Screen, and the Feedback page here. Visuals are crucial!)*
 
-Follow these steps to set up the project locally on your machine.
+| Dashboard | Interview Session |
+|:---:|:---:|
+| ![Dashboard Screenshot](LINK_TO_IMAGE) | ![Interview Screenshot](LINK_TO_IMAGE) |
 
-**Prerequisites**
+---
 
-Make sure you have the following installed on your machine:
+## 🤸 Getting Started locally
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+To run this project dynamically on your local machine:
 
-**Cloning the Repository**
-
+**1. Clone the repository**
 ```bash
-git clone https://github.com/adrianhajdin/ai_mock_interviews.git
-cd ai_mock_interviews
-```
-
-**Installation**
-
-Install the project dependencies using npm:
-
-```bash
-npm install
-```
-
-**Set Up Environment Variables**
-
-Create a new file named `.env.local` in the root of your project and add the following content:
-
-```env
-NEXT_PUBLIC_VAPI_WEB_TOKEN=
-NEXT_PUBLIC_VAPI_WORKFLOW_ID=
-
-GOOGLE_GENERATIVE_AI_API_KEY=
-
-NEXT_PUBLIC_BASE_URL=
-
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
-
-FIREBASE_PROJECT_ID=
-FIREBASE_CLIENT_EMAIL=
-FIREBASE_PRIVATE_KEY=
-```
-
-Replace the placeholder values with your actual **[Firebase](https://firebase.google.com/)**, **[Vapi](https://vapi.ai/?utm_source=youtube&utm_medium=video&utm_campaign=jsmastery_recruitingpractice&utm_content=paid_partner&utm_term=recruitingpractice)** credentials.
-
-**Running the Project**
-
-```bash
-npm run dev
-```
-
-
+git clone [https://github.com/anupam-iiitm/InterviewPrep.git](https://github.com/anupam-iiitm/InterviewPrep.git)
+cd InterviewPrep
