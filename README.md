@@ -57,7 +57,7 @@ Here is a glimpse into the user experience, showcasing the clean UI and complex 
 <div align="center">
   <h3>The User Dashboard</h3>
   <p><em>A central hub built with Shadcn/UI for tracking interview progress, analyzing average scores, and quickly initiating new sessions.</em></p>
-  <img src="./dashboard-preview.png" alt="InterviewPrep Dashboard" width="850" />
+  <img src="./dashboard-preview-1.png" alt="InterviewPrep Dashboard" width="850" />
 </div>
 
 ## 🤸 Getting Started locally
